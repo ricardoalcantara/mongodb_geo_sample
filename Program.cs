@@ -49,7 +49,7 @@ namespace mongodb_sample
 
 
             // 78 returns Hortifruti
-            // 250 retirm Dtprca
+            // 250 returns Dtprca
             var filter = Builders<Company>.Filter.NearSphere(f => f.Point, metroPosition, 250);
 
             var list = await collection.Find(filter)
